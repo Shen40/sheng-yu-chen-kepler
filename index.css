@@ -3,6 +3,10 @@ body{
     font-family: 'Courier New', Courier, monospace
 }
 
+nav{
+    position: fixed;
+}
+
 section{
     padding:10px;
 }
@@ -24,10 +28,13 @@ h1{
 }
 
 #Experience{
-    display: inline-block;
     background-color: rgb(203, 194, 194);
-    width:100%;
 }
+
+#date{
+    text-align: right;
+}
+  
 
 #Connect li{
     display: inline-block;
@@ -35,4 +42,11 @@ h1{
 
 #Connect img{
     width:50px;
+}
+
+.connect-container{
+    display:flex;
+    flex-direction: row;
+    gap:100px;
+    justify-content: center;
 }
