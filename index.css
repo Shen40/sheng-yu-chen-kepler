@@ -6,6 +6,10 @@ body{
 nav{
     position: fixed;
 }
+nav a{
+    color:black;
+    text-decoration: none;
+}
 
 section{
     padding:10px;
@@ -21,11 +25,6 @@ h2{
     color: red;
 }
 
-h1{
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    font-size: 100;
-}
 
 #Experience{
     background-color: rgb(203, 194, 194);
@@ -34,19 +33,74 @@ h1{
 #date{
     text-align: right;
 }
-  
-
-#Connect li{
-    display: inline-block;
-}
-
-#Connect img{
-    width:50px;
-}
-
-.connect-container{
+.exp-container{
     display:flex;
-    flex-direction: row;
-    gap:100px;
-    justify-content: center;
+    flex-direction: column;
+}
+  
+@media (min-width:320px){/*mobile*/
+    /*header(1)*/h1{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        font-size: 30px;/*change*/
+        color:Red; /*change*/
+    }
+    /*Experience(2)*/#Experience{
+        background-color: rgb(203, 194, 194);/*change*/
+        color:black;/*change*/
+    }
+    
+    #date{
+        text-align: right;
+    }
+    .exp-container{
+        display:flex;
+        flex-direction: column;
+    }
+
+    /*Connect(3)*/#Connect img{
+        width:50px;/*change*/
+    }
+    
+    .connect-container{
+        display:flex;
+        flex-direction: row;
+        justify-content: left;/*change*/
+    }
+    
+
+}
+
+@media (min-width:1025px){/*desktop*/
+    /*header(1)*/h1{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        font-size: 50px;/*change*/
+        color:black; /*change*/
+    }
+
+    /*Experience(2)*/#Experience{
+        background-color: black;/*change*/
+        color:white/*change*/
+    }
+    
+    #date{
+        text-align: right;
+    }
+    .exp-container{
+        display:flex;
+        flex-direction: column;
+    }
+
+    /*Connect(3)*/#Connect img{
+        width:100px;/*change*/
+    }
+    
+    .connect-container{
+        display:flex;
+        flex-direction: row;
+        gap:100px;
+        justify-content: center;/*change*/
+    }
+
 }
