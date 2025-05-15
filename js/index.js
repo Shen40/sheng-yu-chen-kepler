@@ -24,3 +24,26 @@ for(let i=0;i<skills.length;i++){
 
 skillsList.style.display = "flex"; 
 skillsList.style.gap = '20px'; 
+
+const messageForm = document.querySelector('[name="leave_message"]');
+messageForm.addEventListener("submit", function(event){
+    event.preventDefault();
+    let userName = event.target.usersName.value;
+    let email = event.target.usersEmail.value;
+    let message = event.target.usersMessage.value;
+    console.log(userName + " | " + email + " | " + message);
+    const messageSection = document.querySelector("#messages")
+    const messageList = messageSection.querySelector("ul")
+    let newMessage = document.createElement("li");
+    newMessage.innerHTML = `<a href="mailto:${email}">${userName}</a> <span>: ${message}</span>`;
+    const removeButton = document.createElement("button");
+    removeButton.innerText = "Remove";
+    removeButton.type = "button"; 
+    removeButton.addEventListener("click", function(event){
+        const entry = event.target.parentNode;
+        entry.remove();
+    }); 
+    newMessage.appendChild(removeButton); 
+    messageList.appendChild(newMessage);
+    messageForm.reset();
+});
