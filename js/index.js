@@ -23,8 +23,9 @@ for(let i=0;i<skills.length;i++){
 }
 
 skillsList.style.display = "flex"; 
-skillsList.style.gap = '20px'; 
+skillsList.style.gap = '50px'; 
 
+//message
 const messageForm = document.querySelector('[name="leave_message"]');
 messageForm.addEventListener("submit", function(event){
     event.preventDefault();
@@ -47,3 +48,24 @@ messageForm.addEventListener("submit", function(event){
     messageList.appendChild(newMessage);
     messageForm.reset();
 });
+
+//Projects
+fetch('https://api.github.com/users/Shen40/repos')
+    .then(response => {
+        return response.text(); 
+  })
+    .then(text => {
+    const repo = JSON.parse(text);
+    console.log(repo);
+    const projectSection = document.querySelector("#Projects");
+    const projectList = projectSection.querySelector("ul");
+    for(let i=0;i<repo.length;i++){
+    let project = document.createElement("li"); 
+    project.innerText = repo[i].name; 
+    projectList.appendChild(project); 
+  }
+  })
+  .catch(error => {
+    console.error('Error fetching repositories:', error);
+  });
+
