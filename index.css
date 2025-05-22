@@ -29,6 +29,10 @@ label[for="email"]{
     margin-right:20px;
 }
 
+#Projects ul{
+    display:flex; 
+    gap:50px;
+}
   
 @media (min-width:320px){/*mobile*/
     /*header(1)*/h1{
