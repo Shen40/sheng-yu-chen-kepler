@@ -3,6 +3,9 @@ body{
     font-family: 'Courier New', Courier, monospace
 }
 
+h1{
+    padding-top:20px;
+}
 nav{
     position: fixed;
 }
@@ -77,8 +80,8 @@ label[for="email"]{
     }
 
     /*Experience(2)*/#Experience{
-        background-color: black;/*change*/
-        color:white/*change*/
+        background-color: pink;/*change*/
+        color:black/*change*/
     }
     
     #date{
