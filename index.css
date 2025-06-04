@@ -31,6 +31,10 @@ h1{
     background-color: rgb(203, 194, 194);
 }
 
+.exp-container{
+    display:grid;
+}
+
 #date{
     text-align: right;
 }
